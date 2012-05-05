@@ -397,8 +397,11 @@ if ($remote->found("euare-grouplistpolicies -g $new_group", qr/$policy/)) {
 $remote->set_credpath($eucalyptus_admin_cred);
 
 $remote->test_name("Add an account policy");
-$policy = "allowall";
-$remote->sys("euare-accountuploadpolicy -a $new_account -p $policy -f $ALLOWALLPOLICY");
+
+my $quota_policy = `cat $QUOTAPOLICY`;
+
+$policy = "quotapol";
+$remote->sys("euare-accountuploadpolicy -a $new_account -p $policy -f $QUOTAPOLICY");
 
 $remote->test_name("Check policy is active");
 if (!$remote->found("euare-accountlistpolicies -a $new_account", qr/$policy/)) {
@@ -407,8 +410,8 @@ if (!$remote->found("euare-accountlistpolicies -a $new_account", qr/$policy/)) {
 
 $remote->test_name("Check that policy is same as original");
 $uploaded = join("", $remote->sys("euare-accountgetpolicy -a $new_account -p $policy"));
-if ($uploaded ne $allowall_policy) {
-  print("original=", $allowall_policy);
+if ($uploaded ne $quota_policy) {
+  print("original=", $quota_policy);
   print("uploaded=", $uploaded);
   $remote->fail("failed to get policy");
 }
