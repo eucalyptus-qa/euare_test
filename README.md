@@ -1,3 +1,74 @@
+
+euare_test
+==========
+
+## Description
+
+Run through euare-* commands on CLC
+
+## Procedure
+
+1. Push test scripts to remote client
+2. Run the euaretest.pl script on the remote machine
+
+[TEST_CASE]: >>>>> make sure 'eucalyptus' account exist <<<<<
+[TEST_CASE]: >>>>> Add an account <<<<<
+[TEST_CASE]: >>>>> Delete an account <<<<<
+[TEST_CASE]: >>>>> create a new account and switch credential to the account's admin <<<<<
+[TEST_CASE]: >>>>> make sure 'admin' of account exist <<<<<
+[TEST_CASE]: >>>>> create a new user <<<<<
+[TEST_CASE]: >>>>> test list user by path <<<<<
+[TEST_CASE]: >>>>> get user attributes <<<<<
+[TEST_CASE]: >>>>> change user attributes <<<<<
+[TEST_CASE]: >>>>> update user info <<<<<
+[TEST_CASE]: >>>>> update user login profile <<<<<
+[TEST_CASE]: >>>>> update user access key <<<<<
+[TEST_CASE]: >>>>> Add a user key <<<<<
+[TEST_CASE]: >>>>> Check that key is active <<<<<
+[TEST_CASE]: >>>>> Deactivate the key <<<<<
+[TEST_CASE]: >>>>> Delete the key <<<<<
+[TEST_CASE]: >>>>> create user certificate <<<<<
+[TEST_CASE]: >>>>> Check that certificate exists <<<<<
+[TEST_CASE]: >>>>> Check that cert is active <<<<<
+[TEST_CASE]: >>>>> Deactivate Cert <<<<<
+[TEST_CASE]: >>>>> Delete cert <<<<<
+[TEST_CASE]: >>>>> Add user certificate from file <<<<<
+[TEST_CASE]: >>>>> Check that certificate exists <<<<<
+[TEST_CASE]: >>>>> Check that cert is active <<<<<
+[TEST_CASE]: >>>>> Deactivate Cert <<<<<
+[TEST_CASE]: >>>>> Delete cert <<<<<
+[TEST_CASE]: >>>>> Create a new group <<<<<
+[TEST_CASE]: >>>>> Test list group by path <<<<<
+[TEST_CASE]: >>>>> Change group attributes <<<<<
+[TEST_CASE]: >>>>> Add user to groups <<<<<
+[TEST_CASE]: >>>>> Check groups for users <<<<<
+[TEST_CASE]: >>>>> Check users for groups <<<<<
+[TEST_CASE]: >>>>> Add user to second group <<<<<
+[TEST_CASE]: >>>>> Check user for group 2 <<<<<
+[TEST_CASE]: >>>>> Check user for group 1 <<<<<
+[TEST_CASE]: >>>>> Remove user from both groups <<<<<
+[TEST_CASE]: >>>>> Add a user policy <<<<<
+[TEST_CASE]: >>>>> Check policy is active <<<<<
+[TEST_CASE]: >>>>> Check that policy is same as original <<<<<
+[TEST_CASE]: >>>>> Delete policy <<<<<
+[TEST_CASE]: >>>>> Add a group policy <<<<<
+[TEST_CASE]: >>>>> Check policy is active <<<<<
+[TEST_CASE]: >>>>> Check that policy is same as original <<<<<
+[TEST_CASE]: >>>>> Delete policy <<<<<
+[TEST_CASE]: >>>>> Add an account policy <<<<<
+[TEST_CASE]: >>>>> Check policy is active <<<<<
+[TEST_CASE]: >>>>> Check that policy is same as original <<<<<
+[TEST_CASE]: >>>>> Delete policy <<<<<
+[TEST_CASE]: >>>>> test allow all policy for user <<<<<
+[TEST_CASE]: >>>>> test allow policy for user <<<<<
+[TEST_CASE]: >>>>> test deny policy for user <<<<<
+[TEST_CASE]: >>>>> test group policy <<<<<
+[TEST_CASE]: >>>>> test account quota policy <<<<<
+[TEST_CASE]: >>>>> clean up accounts and users <<<<<
+
+
+<hr><hr><hr>
+
 # Eucalyptus Testunit Framework
 
 Eucalyptus Testunit Framework is designed to run a list of test scripts written by Eucalyptus developers.
